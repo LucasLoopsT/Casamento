@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casamento</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Presentes</a></li>
+            <li><a href="#">Login Noivos</a></li>
+          </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="banner" class="image-container">
+            <h1>LETICIA GABRIELLY & ERICK NATHAN</h1>
+        </div>
+        <section id="calendar">
+            <h2>Faltam:</h2>
+            <div id="timer">
+                <div id="numbers_timer">
+                    <h2 id="days">00</h2>
+                    <h2 id="hours">00</h2>
+                    <h2 id="minutes">00</h2>
+                    <h2 id="seconds">00</h2>
+                </div>
+                <div id="legend_timer">
+                    <h2>Days</h2>
+                    <h2>Hours</h2>
+                    <h2>Mins</h2>
+                    <h2>Segs</h2>
+                </div>
+            </div>    
+        </section>
+        <section>
+            <h2>Bem-vindos ao nosso casamento!</h2>
+            <p>Sim, é verdade! A gente vai se casar!!!</p> 
+            <p>Estamos muito felizes! Estamos nas nuvens e queremos compartilhar com você todo o nosso amor. Por isso estamos preparando um casamento que fará história e no qual você vai se divertir muito.</p>
+            <p>Enquanto não chega o grande dia criamos um site com um montão de sessões para que todos estejam ao dia de tudo e para compartilhar a nossa história de amor.</p>
+            <p>Uma coisa importante, na sessão presença, poderá confirmar se você vai ou não ao casamento. Confirme o mais rápido possível por favor, que assim, organizar tudo será muito mais fácil.</p>
+            <p>Aproveite da web e a gente se encontra em breve, muitos beijos!</p>
+        </section>
+        <section id="giftsToBuy">
+            <h2>Presentes Disponíveis</h2>
+            <p>Confira aqui o que você ainda pode dar de presente!</p>
+            <div id="toBuyList" class="productList">
+                <div class="product">
+                    <img class="preview" src="data:image/webp;base64,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">
+                    <div>
+                        <h2 class="name">Geladeira</h2>
+                        <h2 class="price">4.800 $</h2>
+                    </div>
+                    <button>Comprar!</button>
+                </div>
+                <div class="product">
+                    <img class="preview" src="data:image/webp;base64,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">
+                    <div>
+                        <h2 class="name">Geladeira</h2>
+                        <h2 class="price">4.800 $</h2>
+                    </div>
+                    <button>Comprar!</button>
+                </div>                
+                <div class="product">
+                    <img class="preview" src="data:image/webp;base64,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">
+                    <div>
+                        <h2 class="name">Geladeira</h2>
+                        <h2 class="price">4.800 $</h2>
+                    </div>
+                    <button>Comprar!</button>
+                </div>                
+            </div>
+        </section>
+        <section id="giftsBought">
+            <h2>Presentes Comprados</h2>
+            <p>Confira aqui a lista do que já foi comprado!</p>
+            <div id="giftsBought" class="list">
+                
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Lucas LoopsT. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
