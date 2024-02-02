@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Song+Myung&display=swap&family=Beau+Rivage&family=Berkshire+Swash&family=Josefin+Slab:wght@400;600&family=Libre+Baskerville:wght@400;700&family=Poppins&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --cor-pri: #607848;
+    --cor-pri-dark: #2c3a26;
+    --cor-BG1: #f3fff6;
+    --cor-BG2: #fffff0;
+    --cor-sec: #2B1105;
+    --cor-sec-light: #594433;
+    --cor-product: #f0f0d8;
+    --cor-product-stroke: #e5ded8;
+  
+    --fs-small-1: 20px;
+    --fs-small-2: 25px;
+    --fs-medium-1: 30px;
+    --fs-medium-2: 40px;
+    --fs-medium-3: 45px;
+    --fs-big-1: 60px;
+    --fs-big-1: 65px;
+  
+    --space-pad: 100px 15px 120px;
+    --space-tit: 60px;
+
+}
+
+body{    
+    background-color: var(--cor-BG1);
+}
+
+.section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--space-pad);
+}
+
+.section h2{
+    font-family: 'Berkshire Swash', serif;
+    font-size: var(--fs-medium-3);
+    text-align: center;
+    color: var(--cor-pri);
+    margin-bottom: var(--space-tit);
+}
+
+.section_abt{
+    max-width: 950px;
+    font-size: var(--fs-small-1);
+    font-family: poppins;
+    text-align: justify;
+    padding: 0px 15px;    
+}
+
+/* HEADER */
+/* HEADER */
+/* HEADER */
+
+header{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor-pri);
+    height: 7vh;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+ul li a{
+    font-size: var(--fs-small-1);
+    color: white;
+    text-decoration: none;
+}
+
+/* BANNER */
+/* BANNER */
+/* BANNER */
+
+#banner{
+    width: 100%;
+    padding: 30px;
+    min-height: 600px;
+    max-height: 650px;
+    background: url("https://cdn0.casamentos.com.br/article-vendor/2958/3_2/960/jpg/jonathan-borba-ac5-efhq7fs-unsplash-1_13_352958-167353954298643.jpeg")no-repeat center center;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-attachment: local;
+    font-family: 'Berkshire Swash', serif;
+
+    position: relative;
+    overflow: hidden;
+}
+
+#banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Cor preta com 50% de opacidade */
+    z-index: 1;
+}
+
+#banner #icon_rings{
+    filter: drop-shadow(2px 4px 6px black);
+    width: 150px;
+    z-index: 1;
+}
+
+#banner h1{
+    max-width: 1150px;
+    background: none;
+    font-size: 80px;
+    color: white;
+    text-align: center;
+    text-shadow: 3px 2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+#banner p{
+  color: white;
+  font-size: var(--fs-small-2);
+  text-shadow: 3px 2px 10px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  margin-top: 20px; 
+}
+
+/* REGRESSIVA */
+/* REGRESSIVA */
+/* REGRESSIVA */
+
+#contagem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 0 30px;
+    background-color: var(--cor-pri);
+    color: var(--cor-BG1);
+    font-family: 'Beau Rivage', cursive;
+}
+
+#contagem h2{
+    font-size: var(--fs-medium-3);;
+    font-weight: normal;
+    text-align: center;
+}
+
+#timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 30px 0;
+}
+
+#timer div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 50px;
+}
+
+#timer div h2, #timer div p{
+    width: 100px;
+    font-size: var(--fs-medium-1);
+    text-align: center;
+    border-bottom: solid;
+    font-family: 'Libre Baskerville', serif;
+}
+
+#timer div p{
+  font-size: var(--fs-small-1);
+}
+
+#numbers_timer h2{
+    background: var(--cor-BG1);
+    border-radius: 10px;
+    padding: 10px;
+    color: var(--cor-pri);
+    font-weight: bold;
+}
+
+#icon_clock{
+    margin-top: 30px;
+    width: 100px;
+    filter: invert(1);
+    rotate: -20deg;
+}
+
+/* BEM VINDO */
+/* BEM VINDO */
+/* BEM VINDO */
+
+#welcome{
+    background: var(--cor-BG1);
+}
+
+/* LISTA PRESENTES */
+/* LISTA PRESENTES */
+/* LISTA PRESENTES */
+
+#giftsToBuy{
+    background-color: var(--cor-BG2);
+}
+
+.productList{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 45px;
+    min-width: 510px;
+    max-width: 940px;
+    height: auto;   
+    padding: 15px;
+}
+
+.product{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 215px;
+    background-color: var(--cor-product);
+    padding: 15px;
+    border-radius: 15px;
+    border: var(--cor-product-stroke) 2px solid;
+    font-family: 'Song Myung', serif;    font-weight: bold;
+    transition: all 0.5s ease;
+}
+
+.product:hover{
+    cursor: pointer;
+    box-shadow: var(--cor-pri) 0px 10px 0px 5px;
+}
+
+.preview{
+    width: 85%;
+    height: 180px;
+    object-fit: contain;
+    background-color: white;
+    border-radius: 15px;
+    margin: 10px 0 20px;
+}
+
+.product h3:nth-child(3){
+    font-size: var(--fs-medium-1);
+}
+
+.product button{
+    margin-top: 30px;
+    width: 120px;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    background-color: var(--cor-pri-dark);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  
+    transition: all 0.2s ease;
+}
+
+.product button:hover{
+    background: #434247;
+}
+
+hr{
+    width: 80%;
+    background-color: var(--cor-pri);
+    padding: 2px;
+    margin: var(--space-tit) 0;
+}
+
+.seeMore{
+    background-color: var(--cor-pri-dark);
+    padding: 10px 25px;
+    font-family: 'Song Myung', serif;
+    font-size: var(--fs-small-2);
+    color: var(--cor-BG1);
+    border: none;
+    border-radius: 15px;
+
+    transition: all 0.2s ease;
+}
+
+.seeMore:hover{
+    cursor: pointer;
+    background: #434247;
+}
+
+/* FOOTER */
+/* FOOTER */
+/* FOOTER */
+
+footer{
+  height: 10vh;
+  background-color: var(--cor-pri-dark);
+}
+
+/* QUERIES */
+/* QUERIES */
+/* QUERIES */
+
+@media (max-width: 885px) {
+    
+    #banner h1{
+        font-size: calc(10vw + 10px); /* Ajuste o valor conforme necessário */
+    }
+
+    .product{
+      width:calc(10vw + 150px)
+    }
+}
+
+@media (max-width: 575px) {
+
+    #timer div h2, #timer div p{
+        width: calc(7vw + 30px);
+        font-size: calc(3vw + 10px);
+    }
+    
+    #timer div p{
+        font-size: calc(1vw + 10px);
+    }
+    
+    #timer div{
+        padding: 0px;
+    }
+    
+    #icon_clock{
+        margin-top: 30px;
+        width: 100px;
+        filter: invert(1);
+        rotate: -20deg;
+    }
+
+    .productList{
+      min-width: 200px;
+      max-width: 510px;
+    }
+}
+
+@media (max-width: 325px) {
+
+
+}
