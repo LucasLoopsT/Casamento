@@ -57,6 +57,35 @@ body{
     padding: 0px 15px;    
 }
 
+#ancora {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--cor-sec-light);
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.3s ease;
+}
+
+#ancora:hover{
+    background-color: var(--cor-sec);
+}
+
+#ancora img{
+    width: 150%;
+    height: 150%;
+    filter: grayscale(1) brightness(0%) invert(1);
+    rotate: -90deg;
+}
+
 /* HEADER */
 /* HEADER */
 /* HEADER */
@@ -64,34 +93,47 @@ body{
 
 header {
     background-color: var(--cor-pri);
-    color: white;
+    color: var(--cor-BG1);
     padding: 15px;
     text-align: center;
-  }
+}
 
-  nav {
+nav {
     display: flex;
     justify-content: center;
+    gap: 10px;
     align-items: center;
     font-family: 'Berkshire Swash', serif;
     padding: 15px;
-  }
+}
 
-  nav span {
+nav span {
     font-size: var(--fs-small-1);
     color: white;
+    border: transparent 2px solid;
+    border-radius: 5px;
     text-decoration: none;
     padding: 10px;
     cursor: pointer;
-  }
+    transition: all 0.5s ease;
+}
 
-  #menu-icon {
+nav span:hover {
+    border: var(--cor-pri-dark) 2px solid;
+}
+
+#menu-icon {
     display: none;
     cursor: pointer;
     color: var(--cor-pri-dark);
     font-size: var(--fs-medium-1);
     font-weight: bold;
-  }
+    transition: all 0.5s ease;
+}
+
+#menu-icon:hover {
+    color: var(--cor-BG1);
+}
 
 /* BANNER */
 /* BANNER */
@@ -350,10 +392,6 @@ footer{
         align-items: center;
     }
 
-    nav a {
-        margin-top: 10px;
-    }
-
     #menu-icon {
         display: block;
     }
@@ -363,7 +401,9 @@ footer{
     }
 
     #menu.active {
-        display: block;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     #timer div h2, #timer div p{

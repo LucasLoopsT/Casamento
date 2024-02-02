@@ -59,3 +59,15 @@ const scrollWhere = (element) => {
     window.scrollTo({ top: topOffset, behavior: 'smooth' });
   }
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  var scrollToTopButton = document.getElementById("ancora");
+
+  window.addEventListener("scroll", function() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      scrollToTopButton.style.display = "flex";
+    } else {
+      scrollToTopButton.style.display = "none";
+    }
+  });  
+});
