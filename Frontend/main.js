@@ -42,3 +42,20 @@ document.addEventListener('DOMContentLoaded', function() {
   // Chama a função
   contagemRegressiva(dataAlvo);
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("menu-icon").addEventListener("click", function() {
+    let menu = document.getElementById("menu");
+    menu.classList.toggle("active");
+  });
+});
+
+const scrollWhere = (element) => {
+  var element = document.querySelector(element);
+
+  if (element) {
+    var topOffset = element.getBoundingClientRect().top + window.pageYOffset;
+    window.scrollTo({ top: topOffset, behavior: 'smooth' });
+  }
+}
