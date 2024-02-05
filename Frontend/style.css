@@ -15,6 +15,7 @@
     --cor-sec-light: #594433;
     --cor-product: #f0f0d8;
     --cor-product-stroke: #e5ded8;
+    --cor-form: #b2de93;
   
     --fs-small-1: 20px;
     --fs-small-2: 25px;
@@ -54,7 +55,8 @@ body{
     font-size: var(--fs-small-1);
     font-family: poppins;
     text-align: justify;
-    padding: 0px 15px;    
+    padding: 0px 15px;  
+    margin: 0 auto; 
 }
 
 #ancora {
@@ -84,6 +86,16 @@ body{
     height: 150%;
     filter: grayscale(1) brightness(0%) invert(1);
     rotate: -90deg;
+}
+
+.btn{
+    font-family: 'Song Myung', serif;
+    font-size: var(--fs-small-2);
+    border: none;
+    border-radius: 15px;
+    padding: 10px 25px;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
 /* HEADER */
@@ -343,21 +355,71 @@ hr{
     margin: var(--space-tit) 0;
 }
 
-.seeMore{
+#giftsToBuy button{
     background-color: var(--cor-pri-dark);
-    padding: 10px 25px;
-    font-family: 'Song Myung', serif;
-    font-size: var(--fs-small-2);
     color: var(--cor-BG1);
-    border: none;
-    border-radius: 15px;
-
-    transition: all 0.2s ease;
 }
 
-.seeMore:hover{
-    cursor: pointer;
+#giftsToBuy button:hover{
     background: #434247;
+}
+
+/* RECADOS */
+/* RECADOS */
+/* RECADOS */
+
+#recados{
+    align-items: unset;
+    background-color: var(--cor-BG2);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    min-width: 250px;
+    width: calc(70vw + 10px);
+    max-width: 980px;
+    background-color: var(--cor-form);
+    padding: 60px;
+    border: var(--cor-pri-dark) 1px solid;
+    border-radius: 15px;
+}
+
+form div{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+form label{
+    color: var(--cor-pri-dark);
+}
+
+form input, form textarea{
+    min-width: 225px;
+    width: calc(50vw + 10px);
+    max-width: 800px;
+    height: 50px;
+    border-radius: 15px;
+    border: var(--cor-pri) solid;
+    background-color: var(--cor-BG2);
+    padding: 10px;
+}
+
+form textarea{
+    min-width: 180px;
+    width: calc(40vw + 10px);
+    max-width: 700px;
+    height: 130px;
+    resize: none;
+}
+
+form button:hover{
+    color: var(--cor-BG2);
+    background: var(--cor-pri-dark);
 }
 
 /* FOOTER */
