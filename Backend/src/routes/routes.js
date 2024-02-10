@@ -1,11 +1,11 @@
 const {Router} = require("express");
+const router = Router();
 
 // Importando rotas
 const userRouter = require("./user.routes");
-// const giftsRouter = require("./gifts.routes");
+const giftRouter = require("./gift.routes");
 
-const router = Router();
 router.use("/user", userRouter);
-// router.use("/gifts", giftsRouter);
+router.use("/gift", giftRouter);
 
 module.exports = router;
