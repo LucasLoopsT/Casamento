@@ -1,16 +1,13 @@
 const User = require("../models/user.models.js");
 
-//.create é um metodo do mongoose para criar um novo documento no mongoDB
-const createService = (body) => User.create(body);
+class UserServices {
 
-//.find é um método de consulta do Mongoose para consultar as coleções
-const findAllService = () => User.find();
+    create = (body) => User.create(body);
+    findAll = () => User.find();
+    findById = (id) => User.findById(id);
+    update = (id, updateData) => User.findByIdAndUpdate(id, updateData, { new: true });
+    delete = (id) => User.findByIdAndDelete(id);
+    
+}
 
-//findById é um método de consulta do Mongoose que é utilizado para recuperar um único documento com base no ID.
-const findByIdService = (id) => User.findById(id);
-
-module.exports = {
-    createService,
-    findAllService,
-    findByIdService
-};
+module.exports = UserServices
