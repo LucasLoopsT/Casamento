@@ -1,3 +1,4 @@
+// CONTAGEM
 
 function contagemRegressiva(dataAlvo) {
   let intervalID; // Mova a declaração para fora da função setInterval
@@ -43,6 +44,8 @@ document.addEventListener('DOMContentLoaded', function() {
   contagemRegressiva(dataAlvo);
 });
 
+
+// HEADER
 
 document.addEventListener("DOMContentLoaded", function() {
   document.getElementById("menu-icon").addEventListener("click", function() {
