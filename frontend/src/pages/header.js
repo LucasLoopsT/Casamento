@@ -1,12 +1,5 @@
-import React from 'react';
-
-document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("menu-icon").addEventListener("click", function () {
-        let menu = document.getElementById("menu");
-        menu.classList.toggle("active");
-    });
-});
-
+import React, { useEffect } from 'react';
+    
 const scrollWhere = (element) => {
     var element = document.querySelector(element);
 
@@ -16,19 +9,29 @@ const scrollWhere = (element) => {
     }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    var scrollToTopButton = document.getElementById("ancora");
-
-    window.addEventListener("scroll", function () {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            scrollToTopButton.style.display = "flex";
-        } else {
-            scrollToTopButton.style.display = "none";
-        }
-    });
-});
-
 const Header = () => {
+    useEffect(() => {
+        
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("menu-icon").addEventListener("click", function () {
+                let menu = document.getElementById("menu");
+                menu.classList.toggle("active");
+            });
+        });
+        
+        document.addEventListener("DOMContentLoaded", function () {
+            var scrollToTopButton = document.getElementById("ancora");
+        
+            window.addEventListener("scroll", function () {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    scrollToTopButton.style.display = "flex";
+                } else {
+                    scrollToTopButton.style.display = "none";
+                }
+            });
+        });
+    }, []);
+
     return (
         <>
             <div className="Header">
@@ -38,7 +41,7 @@ const Header = () => {
                         <div id="menu">
                             <span onClick={() => scrollWhere('header')}>Home</span>
                             <span onClick={scrollWhere('#giftsToBuy')}>Presentes</span>
-                            <span onclick="scrollWhere('#recados')">Recados</span>
+                            <span onClick={scrollWhere('#recados')}>Recados</span>
                             <span>Login</span>
                         </div>
                     </nav>

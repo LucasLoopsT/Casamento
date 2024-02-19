@@ -1,10 +1,11 @@
 import React from 'react';
+import iconRings from '../imgs/icon_rings.webp'
 
 const Banner = () => {
     return (
 
         <div id="banner" class="image-container">
-            <img id="icon_rings" src="./imgs/icon_rings.webp" />
+            <img id="icon_rings" src={iconRings} />
             <h1>Letícia Gabrielly & Erick Nathan</h1>
             <p>19 de julho de 2024</p>
         </div>
