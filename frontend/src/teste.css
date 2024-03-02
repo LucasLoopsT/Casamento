@@ -1,0 +1,147 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto; /* Centraliza o container horizontalmente */
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Centraliza os itens do container horizontalmente */
+    align-items: center; /* Centraliza os itens do container verticalmente */
+}
+.container-btn {
+    padding: 5px;
+    display: flex;
+    gap: 20px;
+}
+
+label {
+    width: 100%;
+    transition: all 0.3s ease-in-out; /* Adiciona uma transição suave ao label */
+    position: relative;
+}
+
+input[type="text"], textarea {
+    width: calc(50% - 5px);
+    padding: 10px;
+    margin-top: 5px; /* Adiciona um espaçamento entre o input e o label */
+}
+
+input[type="text"]:focus + label, textarea:focus + label {
+    top: -15px; /* Move o label para cima quando o input recebe foco */
+    font-size: 12px; /* Reduz o tamanho do label */
+    color: #4CAF50; /* Altera a cor do label quando o input recebe foco */
+}
+
+.inputs-container {
+    flex: 2 1 66.66%; /* Define o container dos inputs para ocupar 2/3 da largura */
+    max-width: calc(66.66% - 20px); /* Define a largura máxima do container */
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto; /* Centraliza os botões horizontalmente */
+    border-radius: 10px;
+}
+
+.md-preview-container {
+    padding: 20px;
+    flex: 1 1 33.33%; /* Define o container do preview para ocupar 1/3 da largura */
+    max-width: calc(33.33% - 20px); /* Define a largura máxima do container */
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: #4CAF50;
+}
+
+.input-group label {
+    position: absolute;
+    left: 10px;
+    top: 20px;
+    color: #888;
+    font-size: 14px;
+    transition: all 0.3s;
+    pointer-events: none;
+}
+
+.input-group input:focus + label,
+.input-group textarea:focus + label,
+.input-group input:not(:placeholder-shown) + label,
+.input-group textarea:not(:placeholder-shown) + label {
+    top: 5px;
+    font-size: 12px;
+    color: #4CAF50;
+}
+
+.md-preview {
+    width: 200px; /* Defina a largura desejada para o container */
+    height: 240px; /* Defina a altura desejada para o container */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden; /* Garante que a imagem não ultrapasse os limites do container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.md-preview img {
+    max-width: 90%; /* Define a largura máxima da imagem como 100% do contêiner */
+    max-height: 150px; /* Define a altura máxima da imagem */
+    object-fit: contain; /* Garante que a imagem seja redimensionada para caber dentro do contêiner sem distorções */
+}
+
+.md-product {
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+.md-product img {
+    width: 100%;
+    height: auto;
+}
+
+.md-product h3 {
+    margin: 10px 0;
+}
+
+/* Para telas menores que 600px */
+@media only screen and (max-width: 600px) {
+    .container {
+        flex-direction: column; /* Alinha os itens em uma coluna */
+        align-items: stretch; /* Estica os itens para preencher a largura */
+    }
+
+    .inputs-container {
+        max-width: 100%; /* Define a largura máxima para preencher a tela inteira */
+    }
+
+    .md-preview-container {
+        max-width: 100%; /* Define a largura máxima para preencher a tela inteira */
+    }
+}
