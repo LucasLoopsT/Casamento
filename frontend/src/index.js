@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import './teste.css';
 import Header from './pages/header'
 import Banner from './pages/banner'
 import Count from './pages/count'
@@ -9,6 +10,7 @@ import BuyList from './pages/buyList'
 import BoughtList from './pages/boughtList'
 import Recados from './pages/recados'
 import Footer from './pages/footer'
+import Modalprodutos from './pages/modalorodutos'
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -21,6 +23,7 @@ root.render(
     <BuyList/>
     <BoughtList/>
     <Recados/>
+    <Modalprodutos/>
     <Footer/>
   </React.StrictMode>
 );
