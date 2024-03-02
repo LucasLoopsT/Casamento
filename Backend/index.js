@@ -8,6 +8,7 @@ const routes = require("./src/routes/routes.js")
 dotenv.config();
 
 const app = express();
+app.use(cors());
 const port = process.env.PORT || 3001;
 
 connectDatabase();

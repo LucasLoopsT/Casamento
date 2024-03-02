@@ -5,15 +5,15 @@ class UserController {
 
     create = async (req, res) => {
         try {//constante que verifica todos os campos
+
             const { name, email, password} = req.body;
 
             if (!name || !email || !password) {
                 res.status(400).send({ message: "Preencha todos os espaços" });
             }
-
             //await é usado junto com async
             const user = await services.create(req.body);
-
+            
             if (!user) {
                 return res.status(400).send({ message: "Erro ao criar usuário" });
             }

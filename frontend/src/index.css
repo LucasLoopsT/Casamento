@@ -28,7 +28,10 @@
   --space-pad: 100px 15px 120px;
   --space-tit: 60px;
   --space-container: 0px 40px;
+}
 
+.hide{
+  display: none;
 }
 
 body{    
@@ -380,8 +383,8 @@ hr{
     overflow-y: hidden;
     white-space: nowrap;
     scroll-snap-type: x mandatory;
-    background: var(--cor-BG-product);;
-    border: solid black 2px;  
+    background: var(--cor-product-stroke);
+    border: solid 5px var(--cor-product-stroke);  
     border-radius: 15px;
 }
 
@@ -416,6 +419,20 @@ hr{
 /* RECADOS FORMULÁRIO */
 /* RECADOS FORMULÁRIO */
 
+#alertFields{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 5px;
+  
+  background: var(--cor-pri-dark);
+  color: var(--cor-BG1);
+  font-size: var(--fs-small-2);
+  text-align: center;
+  font-family: 'Song Myung';
+  z-index: 100;
+}
+
 #recados{
   align-items: unset;
   background-color: var(--cor-BG2);
@@ -427,6 +444,7 @@ hr{
 
 form{
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -446,6 +464,13 @@ form div{
   justify-content: start;
 }
 
+form legend{
+  font-family: 'Berkshire Swash';
+  font-size: var(--fs-medium-1);
+  color: var(--cor-pri-dark);
+  text-align: center;
+}
+
 form label{
   color: var(--cor-pri-dark);
 }
@@ -459,6 +484,8 @@ form input, form textarea{
   border: var(--cor-pri) solid;
   background-color: var(--cor-BG2);
   padding: 10px;
+  
+  font-family: 'Poppins';
 }
 
 form textarea{
@@ -477,6 +504,38 @@ form button:hover{
   background: var(--cor-BG2);
 }
 
+#modalConfirm{
+  position: fixed;
+  top: 0;
+}
+
+.backComments{
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-family: cursive;
+    font-weight: bold;
+    color: var(--cor-sec-light);
+    cursor: pointer;
+}
+
+.backComments:hover {
+  color: var(--cor-sec);
+}
+
+.modalLink {
+  width: 100%;
+  text-align: right;
+  color: var(--cor-sec-light);
+  text-decoration: underline;
+  font-size: var(--fs-small-1);
+  cursor:pointer;
+}
+
+.modalLink:hover {
+  color: var(--cor-sec);
+}
+
 /* RECADOS COMENTÁRIO */
 /* RECADOS COMENTÁRIO */
 /* RECADOS COMENTÁRIO */
@@ -484,14 +543,18 @@ form button:hover{
 #comments{
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
+  min-width: 250px;
+  width: calc(70vw + 10px);
+  max-width: 950px;
+  margin: 60px auto 0; 
 }
 
 .person{
-  max-width: 950px;
+  width: 100%;
   font-size: var(--fs-small-1);
   font-family: poppins;
-  text-align: justify;
+  text-align: left;
   padding: 0px 15px;  
   border-left: 8px solid var(--cor-pri)
 }
@@ -569,5 +632,31 @@ footer{
   .productList{
     min-width: 200px;
     max-width: 510px;
+  }
+}
+
+/* Animations */
+/* Animations */
+/* Animations */
+
+@keyframes modal {
+0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes alert {
+0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
