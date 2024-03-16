@@ -10,6 +10,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - Javascript
 - React
 - Node.js
+- Mongo.db
 - Git e Github
 
 ---
