@@ -19,7 +19,7 @@ root.render(
     <Count/>
     <Welcome/>
     <BuyList/>
-    <BoughtList/>
+    {/* <BoughtList/> */}
     <Recados/>
     <Footer/>
   </React.StrictMode>

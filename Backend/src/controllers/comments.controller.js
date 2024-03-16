@@ -6,9 +6,9 @@ class CommentController {
     //async para dizer que é uma função assincrona
     create = async (req, res) => {
         try {//constante que verifica todos os campos
-            const { userID, text} = req.body;
+            const { userID, userName, text, day} = req.body;
 
-            if (!userID || !userName || !text) {
+            if (!userID || !userName || !text || !day) {
                 res.status(400).send({ message: "Preencha todos os espaços" });
             }
 

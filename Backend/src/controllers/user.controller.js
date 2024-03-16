@@ -61,6 +61,30 @@ class UserController {
             res.status(500).send({message: err.mensage, error: "Não encontrado"})
         }
     }
+
+    findByEmail = async (req, res) => {
+        try {
+            const email = req.body.newEmail;
+            const user = await services.findByEmail(email);
+
+            if (!email) {
+                res.status(400).send({ message: "Insira o email"});
+            }
+            
+            if(user == null){
+                res.status(200).send({message: "Usuário NÃO existe!"})
+            }
+
+            if(user){
+                res.status(201).send({
+                    message: "Usuário existente:",
+                    user: user
+                });
+            }
+        } catch (err) {
+            res.status(500).send({message: "Não encontrado!"})
+        }
+    }
     
     update = async (req, res) => {
         try {

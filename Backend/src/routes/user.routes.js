@@ -5,6 +5,7 @@ const UserController = require("../controllers/user.controller.js");
 const controller = new UserController();
 
 userRouter.post("/", controller.create);
+userRouter.post("/email", controller.findByEmail);
 userRouter.get("/", controller.findAll);
 userRouter.get("/:id", controller.findById);
 userRouter.patch("/:id", controller.update);

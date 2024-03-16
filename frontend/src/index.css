@@ -419,12 +419,10 @@ hr{
 /* RECADOS FORMULÁRIO */
 /* RECADOS FORMULÁRIO */
 
-#alertFields{
+#alertModal{
   position: fixed;
   top: 0;
-  width: 100%;
-  padding: 5px;
-  
+  width: 100%;  
   background: var(--cor-pri-dark);
   color: var(--cor-BG1);
   font-size: var(--fs-small-2);
@@ -504,9 +502,29 @@ form button:hover{
   background: var(--cor-BG2);
 }
 
-#modalConfirm{
-  position: fixed;
-  top: 0;
+#formConfirm{
+  max-width: 300px;
+  max-height: 220px;
+  background: var(--cor-pri);
+  border: var(--cor-pri-dark) 2px solid;
+  gap: 10px;
+}
+
+#formConfirm legend {
+  color: var(--cor-BG2);
+}
+
+#formConfirm span {
+  color: var(--cor-BG2);
+}
+
+#formConfirm span:hover {
+  color: var(--cor-pri-dark);
+}
+
+#formConfirm input {
+  max-width: 150px;
+  border: var(--cor-pri-dark) 2px solid;
 }
 
 .backComments{
@@ -650,13 +668,28 @@ footer{
   }
 }
 
-@keyframes alert {
+@keyframes alertOpen {
 0% {
     opacity: 0;
     transform: translateY(-20px);
+    padding: 0px;
   }
   100% {
     opacity: 1;
     transform: translateY(0);
+    padding: 5px;
+  }
+}
+
+@keyframes alertClose {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+    padding: 5px;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+    padding: 0px;
   }
 }

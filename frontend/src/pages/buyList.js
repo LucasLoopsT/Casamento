@@ -6,9 +6,8 @@ const BuyList = () => {
             <h2>Lista de Presentes</h2>
             <div className="section_abt">
             <p>Para nós, a presença de vocês neste dia tão especial é o maior presente que poderíamos receber. Mas, se vocês
-                também quiserem nos presentear, ficaremos muito agradecidos. Fizemos essa lista virtual, mas caso queiram
-                comprar itens físicos criamos listas na Havan e na Ponto Frio, se por acaso não tiver um item que gostaria de
-                presentar fale com um de nós dois que podemos combinar da melhor forma possivel!</p>
+                também quiserem nos presentear, ficaremos muito agradecidos. Fizemos essa lista virtual de sugestões para 
+                ajudar em casos de dúvidas em o que nos dar!</p>
             </div>
             <hr/>
             <div id="toBuyList" className="productList">

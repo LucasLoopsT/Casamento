@@ -17,7 +17,11 @@ const CommentSchema = new mongoose.Schema({
     text: {
         type: String,
         required: true,
-        select: false,
+    },
+
+    day: {
+        type: String,
+        required: true,
     }
 });
 
