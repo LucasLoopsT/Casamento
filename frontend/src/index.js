@@ -23,7 +23,7 @@ root.render(
     <BuyList/>
     {/* <BoughtList/> */}
     <Recados/>
-    <Modalprodutos/>
+    {/* <Modalprodutos/> */}
     <Footer/>
   </React.StrictMode>
 );
