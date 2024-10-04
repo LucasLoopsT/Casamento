@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Casamento/static/css/main.482bb53e.css",
+    "main.js": "/Casamento/static/js/main.b8f6589e.js",
+    "static/js/453.8ab44547.chunk.js": "/Casamento/static/js/453.8ab44547.chunk.js",
+    "static/media/icon_rings.webp": "/Casamento/static/media/icon_rings.a5e7fcfcafa9a97b743c.webp",
+    "index.html": "/Casamento/index.html",
+    "main.482bb53e.css.map": "/Casamento/static/css/main.482bb53e.css.map",
+    "main.b8f6589e.js.map": "/Casamento/static/js/main.b8f6589e.js.map",
+    "453.8ab44547.chunk.js.map": "/Casamento/static/js/453.8ab44547.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.482bb53e.css",
+    "static/js/main.b8f6589e.js"
+  ]
+}
